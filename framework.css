@@ -1,0 +1,23 @@
+main,
+section,
+footer {
+  height: 100vh;
+  width: 100%;
+  background-image: url(imgs/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 80vh;
+  width: 85%;
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  background: linear-gradient(transparent 60%, rgb(4, 61, 42));
+  flex-wrap: wrap;
+}
