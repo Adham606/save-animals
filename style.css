@@ -1,0 +1,966 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-color: #00FF26;
+    --secondary-color: rgb(204, 204, 204);
+    --p-color: rgb(233, 233, 233);
+}
+
+section .container,
+footer .container {
+    overflow: hidden;
+}
+
+/* MAIN */
+main .container {
+    overflow: hidden;
+    position: relative;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 15%;
+    top: 0;
+    z-index: -1;
+}
+
+header {
+    width: 100%;
+    padding: 30px;
+    height: 10%;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    gap: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    box-shadow: 0 0 5px white;
+    bottom: -10px;
+    left: 0;
+    transition: all 0.2s;
+}
+
+nav ul li:hover::after {
+    display: block;
+    width: 100%;
+}
+
+nav ul li:first-child::after {
+    background-color: var(--main-color);
+}
+
+nav ul li:first-child a {
+    color: var(--main-color);
+}
+
+.header-logo {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.header-logo span {
+    color: var(--main-color);
+}
+
+.hero-content {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-top: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 6rem;
+    font-weight: 800;
+    letter-spacing: 30px;
+    text-align: center;
+    margin-right: -30px;
+}
+
+.hero-content h3 {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 40px;
+    text-align: center;
+    margin-right: -50px;
+}
+
+.photo-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: -120px;
+}
+
+.photo-main img {
+    width: 40%;
+}
+
+.spinner {
+    animation: spin 30s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.join-us {
+    height: 50px;
+    width: 250px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: -100px;
+    z-index: 2;
+}
+
+.join-us:hover {
+    color: black;
+    background-color: white;
+}
+
+/* Section About-US */
+.about-us .container {
+    display: flex;
+}
+
+.about-us .container div {
+    animation: zoomIn 1.4s ease-in-out forwards;
+    animation-delay: 0.2s;
+    animation-name: coming;
+}
+
+@keyframes coming {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.content-about {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 50px;
+}
+
+.photo-about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.photo-about img {
+    width: 90%;
+}
+
+.about-us .content-about h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--main-color);
+}
+
+.about-us .content-about h2 {
+    font-size: 4rem;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.about-us .content-about p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--p-color);
+}
+
+.about-us .content-about button {
+    height: 45px;
+    width: 200px;
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: var(--main-color);
+    border-radius: 25px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    margin-top: 40px;
+}
+
+.about-us .content-about button:hover {
+    background-color: #00d11f;
+}
+
+/* Projects Section */
+.projects .container {
+    display: flex;
+}
+
+.projects .container div {
+    animation: zoomIn 1.4s ease-in-out forwards;
+    animation-delay: 0.2s;
+    animation-name: coming;
+}
+
+.content-projects {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 20px;
+    padding-right: 50px;
+}
+
+.photo-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+}
+
+.photo-projects img {
+    width: 90%;
+}
+
+.projects .content-projects h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--main-color);
+}
+
+.projects .content-projects h2 {
+    font-size: 4rem;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.projects .content-projects ol {
+    font-size: 20px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.projects .content-projects ol li {
+    color: var(--p-color);
+}
+
+.projects .content-projects button {
+    height: 45px;
+    width: 200px;
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: var(--main-color);
+    border-radius: 25px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    margin-top: 40px;
+}
+
+.projects .content-projects button:hover {
+    background-color: #00d11f;
+}
+
+/* Environments Section */
+.env .container {
+    position: relative;
+    display: flex;
+    animation: zoomIn 1.4s ease-in-out forwards;
+    animation-delay: 0.2s;
+    animation-name: coming;
+}
+
+#left {
+    position: absolute;
+    left: 4%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#right {
+    position: absolute;
+    right: 4%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arrows {
+    width: fit-content;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.env .container i {
+    font-size: 40px;
+    color: #ccc;
+    opacity: 50%;
+    transition: 0.2s;
+}
+
+.env .arrows:not(.disabled):hover i {
+    transform-origin: top;
+    opacity: 100%;
+    scale: 1.2;
+}
+
+.slide-title {
+    width: 100%;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px #000;
+    z-index: 2;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.env-img-container {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.slide img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+/* Animals Section */
+.animals h2,
+.animals div {
+    animation: zoomIn 1.4s ease-in-out forwards;
+    animation-delay: 0.2s;
+    animation-name: coming;
+}
+
+.animals {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.animals h2 {
+    font-size: 4rem;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.big-container {
+    display: flex;
+    height: 80%;
+    width: 90%;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-content: end;
+    justify-content: space-between;
+}
+
+.small-container {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    height: 50%;
+    backdrop-filter: blur(8px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(transparent 60%, rgb(4, 61, 42));
+    border-radius: 25px;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+
+.small-container img {
+    /* width: 100%; */
+    height: 70%;
+}
+
+.small-container:hover {
+    background-color: rgb(255,255,255, 0.3);
+}
+
+.small-container img:first-of-type {
+    width: 60%;
+}
+
+.small-container h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--main-color);
+}
+
+/* Sign Up Section */
+.sign-up .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+.sign-up .container div {
+    animation: zoomIn 1.4s ease-in-out forwards;
+    animation-delay: 0.2s;
+    animation-name: coming;
+}
+
+.sign-up .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.sign-up .title h2 {
+    font-size: 4rem;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sign-up .title h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--main-color);
+    text-align: center;
+}
+
+.sign-up .inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.sign-up .inputs input {
+    font-size: 18px;
+    letter-spacing: 1px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50px;
+    height: 45px;
+    width: 50%;
+    padding: 0 30px;
+}
+
+.sign-up .inputs input::placeholder {
+    color: white;
+}
+
+.sign-up .membership {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.sign-up .membership p {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    margin-top: 15px;
+}
+
+.sign-up .membership .membership-checkbox {
+    width: 100%;
+    display: flex;
+    font-size: 18px;
+    justify-content: space-between;
+}
+
+input[type="radio"] {
+    accent-color: #2196f3;
+}
+
+.sign-up .be-member input {
+    height: 45px;
+    width: 200px;
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: var(--main-color);
+    border-radius: 25px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    margin-top: 30px;
+}
+
+.sign-up .be-member input:hover {
+    background-color: #00d11f;
+}
+
+/* Footer */
+footer {
+    height: 50vh;
+}
+
+footer .container {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    animation: zoomIn 1.4s ease-in-out forwards;
+    animation-delay: 0.2s;
+    animation-name: coming;
+}
+
+footer .container .content-footer {
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .container .quick-links,
+footer .container .contacts,
+footer .container .socials {
+    display: flex;
+    width: 33%;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 0;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer a {
+    font-size: 24px;
+    line-height: 2;
+    color: var(--secondary-color);
+}
+
+footer a:hover {
+    color: rgb(241, 241, 241);
+    text-shadow: 0 0 10px white;
+}
+
+.copyrights {
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-align: center;
+    opacity: 70%;
+}
+
+/* Media */
+
+/* medium */
+@media (max-width: 1366px) {
+    nav ul {
+        gap: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .photo-main {
+        margin-top: -60px;
+    }
+
+    .content-projects {
+        padding-left: 10px;
+    }
+
+    .sign-up .container {
+        gap: 10px;
+    }
+
+    .sign-up .title h2 {
+        font-size: 3rem;
+    }
+
+    .sign-up .membership {
+        gap: 10px;
+    }
+
+    footer h2 {
+        margin-bottom: 25px;
+    }
+
+    .container {
+        height: 95vh;
+    }
+
+    footer {
+        height: 80vh;
+    }
+
+    footer h2 {
+        margin-bottom: 40px;
+    }
+
+    footer .container .content-footer {
+        padding-bottom: 0;
+    }
+}
+
+/* small */
+@media (max-width: 768px) {
+
+    /* Main */
+    main .container {
+        height: 80%;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .hero-content h1 {
+        letter-spacing: 10px;
+        font-size: 1.5rem;
+        margin-right: -10px;
+    }
+
+    .hero-content h3 {
+        letter-spacing: 20px;
+        font-size: 1rem;
+        margin-right: -20px;
+    }
+
+    .photo-main {
+        margin-top: 10px;
+    }
+
+    .photo-main img {
+        width: 90%;
+    }
+
+    .join-us {
+        margin-top: 15px;
+    }
+
+    /* about us section */
+    .about-us .container {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .content-about {
+        margin-top: 15px;
+        height: 50%;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        align-items: center;
+    }
+
+    .photo-about {
+        height: 50%;
+        width: 100%;
+    }
+
+    .photo-about img {
+        height: 80%;
+    }
+
+    .about-us .content-about h3 {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .about-us .content-about h2 {
+        font-size: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .about-us .content-about p {
+        font-size: 10px;
+    }
+
+    .about-us .content-about button {
+        font-size: 14px;
+        width: 130px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    /* projects section */
+    .projects .container {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .content-projects {
+        margin-top: -15px;
+        height: 50%;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        align-items: center;
+    }
+
+    .photo-projects {
+        height: 50%;
+        width: 100%;
+    }
+
+    .photo-projects img {
+        height: 70%;
+    }
+
+    .projects .content-projects h3 {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .projects .content-projects h2 {
+        font-size: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .projects .content-projects ol {
+        font-size: 10px;
+        gap: 5px;
+        line-height: 1.5;
+        padding-left: 10px;
+    }
+
+    .projects .content-projects button {
+        font-size: 14px;
+        width: 130px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    /* Env section */
+    .env .container {
+        height: 75%;
+    }
+
+    .slide-title {
+        font-size: 22px;
+    }
+
+    /* Animals section */
+    .animals {
+        gap: 0;
+    }
+
+    .animals h2 {
+        font-size: 40px;
+        line-height: 0;
+    }
+
+    .animals h3 {
+        font-size: 20px;
+    }
+
+    .big-container {
+        height: 90%;
+    }
+
+    .small-container {
+        width: 48%;
+        height: 30%;
+    }
+
+    /* Sign Up section */
+    .sign-up .container {
+        gap: 0px;
+    }
+
+    .sign-up .title {
+        gap: 5px;
+    }
+
+    .sign-up .title h3 {
+        font-size: 14px;
+    }
+
+    .sign-up .title h2 {
+        font-size: 15px;
+    }
+
+    .sign-up .inputs {
+        gap: 12px;
+    }
+
+    .sign-up .inputs input {
+        font-size: 12px;
+        width: 90%;
+    }
+
+    .sign-up .membership {
+        width: 85%;
+        margin-top: 5px;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .sign-up .membership .membership-checkbox {
+        width: 100%;
+        display: flex;
+        font-size: 12px;
+        justify-content: space-between;
+    }
+
+    .sign-up .membership-checkbox .checkbox {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    /* footer */
+    footer {
+        height: 40vh;
+    }
+
+    footer .container {
+        gap: 30px;
+    }
+
+    footer .container .content-footer {
+        padding: 0;
+    }
+
+    footer h2 {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    footer a {
+        font-size: 9px;
+    }
+
+    .copyrights {
+        font-size: 7px;
+    }
+
+}
